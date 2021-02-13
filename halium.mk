@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
     libartpalette-system \
     libashmemd_client \
     libaudioeffect_jni \
+    libaudioroute \
     libbinder \
     libbinder_ndk \
     libc.bootstrap \
