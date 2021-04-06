@@ -309,6 +309,7 @@ PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
 
 # Halium-specific packages
 PRODUCT_PACKAGES += \
+    camera_service \
     libcamera_compat_layer \
     libhwc2_compat_layer \
     libmedia_compat_layer \
