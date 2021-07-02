@@ -230,6 +230,9 @@ PRODUCT_PACKAGES += \
     make_f2fs \
     vndk_snapshot_package \
 
+# Wrapped net utils for /vendor access.
+PRODUCT_PACKAGES += netutils-wrapper-1.0
+
 # Android Runtime APEX module.
 PRODUCT_PACKAGES += com.android.runtime
 PRODUCT_HOST_PACKAGES += com.android.runtime
@@ -309,6 +312,7 @@ PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
 
 # Halium-specific packages
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1-service.stub \
     camera_service \
     libcamera_compat_layer \
     libhwc2_compat_layer \
