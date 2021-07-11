@@ -18,6 +18,7 @@
 PRODUCT_PACKAGES += \
     abb \
     adbd \
+    android.hardware.audio@5.0 \
     android.hardware.bluetooth.a2dp@1.0 \
     android.hidl.allocator@1.0-service \
     android.hidl.memory@1.0-impl \
