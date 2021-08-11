@@ -315,6 +315,7 @@ PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1-service.stub \
     camera_service \
+    libbiometry_fp_api \
     libcamera_compat_layer \
     libhwc2_compat_layer \
     libmedia_compat_layer \
