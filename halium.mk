@@ -320,4 +320,5 @@ PRODUCT_PACKAGES += \
     libhwc2_compat_layer \
     libmedia_compat_layer \
     libubuntu_application_api \
+    micshm.sh \
     minimediaservice \
