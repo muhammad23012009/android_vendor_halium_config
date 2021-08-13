@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
     bcc \
     blank_screen \
     blkid \
-    bootanimation \
     bootstat \
     bpfloader \
     bugreport \
