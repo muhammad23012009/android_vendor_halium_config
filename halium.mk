@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Include audio
-$(call inherit-product, vendor/halium/config/halium_audio.mk)
-
 # Base modules and settings for the system partition.
 PRODUCT_PACKAGES += \
     abb \
