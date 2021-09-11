@@ -16,22 +16,19 @@
 
 # Base modules and settings for the system partition.
 PRODUCT_PACKAGES += \
-    abb \
-    adbd \
-    android.hardware.audio@5.0 \
+    adbd_system_api \
     android.hardware.bluetooth.a2dp@1.0 \
     android.hidl.allocator@1.0-service \
     android.hidl.memory@1.0-impl \
     android.hidl.memory@1.0-impl.vendor \
     android.system.suspend@1.0-service \
     apexd \
-    applypatch \
     appops \
-    ashmemd \
     atrace \
     bcc \
     blank_screen \
     blkid \
+    service-blobstore \
     bootstat \
     bpfloader \
     bugreport \
@@ -39,11 +36,22 @@ PRODUCT_PACKAGES += \
     cgroups.json \
     charger \
     cmd \
+    com.android.adbd \
     com.android.conscrypt \
+    com.android.extservices \
+    com.android.i18n \
+    com.android.ipsec \
     com.android.media \
     com.android.media.swcodec \
+    com.android.mediaprovider \
+    com.android.os.statsd \
+    com.android.permission \
     com.android.resolv \
+    com.android.neuralnetworks \
+    com.android.sdkext \
+    com.android.tethering \
     com.android.tzdata \
+    com.android.wifi \
     crash_dump \
     debuggerd\
     device_config \
@@ -55,8 +63,10 @@ PRODUCT_PACKAGES += \
     flags_health_check \
     framework-sysconfig.xml \
     fsck_msdos \
+    fsverity-release-cert-der \
     fs_config_files_system \
     fs_config_dirs_system \
+    group_system \
     gsid \
     gsi_tool \
     heapprofd \
@@ -64,23 +74,25 @@ PRODUCT_PACKAGES += \
     gatekeeperd \
     gpuservice \
     hwservicemanager \
-    idmap \
     idmap2 \
     idmap2d \
     ime \
     incident \
     incidentd \
     incident_helper \
+    incident_helper-cmd \
+    init \
     init.environ.rc \
     init.rc \
     init_system \
     installd \
     ip \
-    ip6tables \
     iptables \
     ip-up-vpn \
+    service-jobscheduler \
     keystore \
     ld.config.txt \
+    credstore \
     ld.mc \
     libaaudio \
     libamidi \
@@ -89,21 +101,20 @@ PRODUCT_PACKAGES += \
     libandroid_runtime \
     libandroid_servers \
     libartpalette-system \
-    libashmemd_client \
     libaudioeffect_jni \
     libaudioroute \
     libbinder \
     libbinder_ndk \
     libc.bootstrap \
     libcamera2ndk \
-    libc_malloc_debug \
-    libc_malloc_hooks \
     libcutils \
     libdl.bootstrap \
+    libdl_android.bootstrap \
     libdrmframework \
     libdrmframework_jni \
     libEGL \
     libETC1 \
+    libfdtrack \
     libFFTEm \
     libfilterfw \
     libgatekeeper \
@@ -128,11 +139,10 @@ PRODUCT_PACKAGES += \
     libnetd_client \
     libnetlink \
     libnetutils \
-    libneuralnetworks \
+    libneuralnetworks_packageinfo \
     libOpenMAXAL \
     libOpenSLES \
     libpdfium \
-    libpixelflinger \
     libpower \
     libpowermanager \
     libradio_metadata \
@@ -146,8 +156,6 @@ PRODUCT_PACKAGES += \
     libspeexresampler \
     libsqlite \
     libstagefright \
-    libstagefright_amrnb_common \
-    libstagefright_enc_common \
     libstagefright_foundation \
     libstagefright_omx \
     libstdc++ \
@@ -156,11 +164,10 @@ PRODUCT_PACKAGES += \
     libui \
     libusbhost \
     libutils \
-    libvorbisidec \
     libvulkan \
-    libwifi-service \
     libwilhelm \
     linker \
+    linkerconfig \
     lmkd \
     logcat \
     logd \
@@ -168,7 +175,6 @@ PRODUCT_PACKAGES += \
     lshal \
     mdnsd \
     mediacodec.policy \
-    mediadrmserver \
     mediaextractor \
     mediametrics \
     media_profiles_V1_0.dtd \
@@ -176,18 +182,21 @@ PRODUCT_PACKAGES += \
     mke2fs \
     mtpd \
     ndc \
+    passwd_system \
     perfetto \
     ping \
     ping6 \
     platform.xml \
     pm \
     pppd \
+    preinstalled-packages-platform.xml \
     privapp-permissions-platform.xml \
     racoon \
     recovery-persist \
     resize2fs \
     rss_hwm_reset \
     run-as \
+    sanitizer.libraries.txt \
     schedtest \
     screencap \
     sdcard \
@@ -199,7 +208,7 @@ PRODUCT_PACKAGES += \
     settings \
     sgdisk \
     shell_and_utilities_system \
-    statsd \
+    snapshotctl \
     storaged \
     task_profiles.json \
     tc \
@@ -212,6 +221,7 @@ PRODUCT_PACKAGES += \
     usbd \
     vdc \
     viewcompiler \
+    vndservicemanager \
     vold \
     watchdogd \
     wificond \
@@ -229,12 +239,8 @@ PRODUCT_PACKAGES += \
     make_f2fs \
     vndk_snapshot_package \
 
-# Wrapped net utils for /vendor access.
-PRODUCT_PACKAGES += netutils-wrapper-1.0
-
 # Android Runtime APEX module.
 PRODUCT_PACKAGES += com.android.runtime
-PRODUCT_HOST_PACKAGES += com.android.runtime
 
 # Host tools to install
 PRODUCT_HOST_PACKAGES += \
@@ -246,7 +252,8 @@ PRODUCT_HOST_PACKAGES += \
     e2fsck \
     fastboot \
     flags_health_check \
-    icu-data_host_runtime_apex \
+    icu-data_host_i18n_apex \
+    icu_tzdata.dat_host_tzdata_apex \
     idmap2 \
     incident_report \
     ld.mc \
@@ -265,31 +272,35 @@ PRODUCT_HOST_PACKAGES += \
     unwind_symbols \
     viewcompiler \
     tzdata_host \
-    tzdata_host_runtime_apex \
-    tzlookup.xml_host_runtime_apex \
+    tzdata_host_tzdata_apex \
+    tzlookup.xml_host_tzdata_apex \
     tz_version_host \
-    tz_version_host_runtime_apex \
+    tz_version_host_tzdata_apex \
 
 PRODUCT_COPY_FILES += \
-    system/core/rootdir/ueventd.rc:root/ueventd.rc \
     system/core/rootdir/etc/hosts:system/etc/hosts
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += debug.atrace.tags.enableflags=0
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.traced.enable=1
 
 # Packages included only for eng or userdebug builds, previously debug tagged
 PRODUCT_PACKAGES_DEBUG := \
     adb_keys \
     arping \
     gdbserver \
+    idlcli \
     init-debug.rc \
     iotop \
+    iperf3 \
     iw \
     logpersist.start \
     logtagd.rc \
     procrank \
+    remount \
     showmap \
     sqlite3 \
     ss \
+    start_with_lockagent \
     strace \
     sanitizer-status \
     tracepath \
@@ -319,6 +330,7 @@ PRODUCT_PACKAGES += \
     libhwc2_compat_layer \
     libmedia_compat_layer \
     libubuntu_application_api \
+    libui_compat_layer \
     micshm.sh \
     miniafservice \
     minimediaservice \
