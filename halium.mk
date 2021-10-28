@@ -239,8 +239,12 @@ PRODUCT_PACKAGES += \
     make_f2fs \
     vndk_snapshot_package \
 
-# Android Runtime APEX module.
+# Runtime (Bionic) APEX module.
 PRODUCT_PACKAGES += com.android.runtime
+
+# ART APEX module.
+PRODUCT_PACKAGES += com.android.art
+PRODUCT_HOST_PACKAGES += com.android.art
 
 # Host tools to install
 PRODUCT_HOST_PACKAGES += \
