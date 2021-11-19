@@ -239,6 +239,9 @@ PRODUCT_PACKAGES += \
     make_f2fs \
     vndk_snapshot_package \
 
+# Wrapped net utils for /vendor access.
+PRODUCT_PACKAGES += netutils-wrapper-1.0
+
 # Runtime (Bionic) APEX module.
 PRODUCT_PACKAGES += com.android.runtime
 
