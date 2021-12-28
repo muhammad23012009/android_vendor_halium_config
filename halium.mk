@@ -336,6 +336,7 @@ PRODUCT_PACKAGES += \
     libcamera_compat_layer \
     libhwc2_compat_layer \
     libmedia_compat_layer \
+    libselinux_stubs \
     libubuntu_application_api \
     libui_compat_layer \
     micshm.sh \
