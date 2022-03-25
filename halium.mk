@@ -75,7 +75,6 @@ PRODUCT_PACKAGES += \
     init.rc \
     init_system \
     installd \
-    iorapd \
     ip \
     ip6tables \
     iptables \
