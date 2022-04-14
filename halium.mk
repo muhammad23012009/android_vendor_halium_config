@@ -340,5 +340,4 @@ PRODUCT_PACKAGES += \
     libubuntu_application_api \
     libui_compat_layer \
     micshm.sh \
-    miniafservice \
     minimediaservice \
