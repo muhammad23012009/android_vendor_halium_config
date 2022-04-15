@@ -334,6 +334,7 @@ PRODUCT_PACKAGES += \
     camera_service \
     libbiometry_fp_api \
     libcamera_compat_layer \
+    libdroidmedia \
     libhwc2_compat_layer \
     libmedia_compat_layer \
     libselinux_stubs \
