@@ -249,6 +249,19 @@ PRODUCT_PACKAGES += com.android.runtime
 PRODUCT_PACKAGES += com.android.art
 PRODUCT_HOST_PACKAGES += com.android.art
 
+# Base modules and settings for recovery from base_vendor.mk
+PRODUCT_PACKAGES += \
+    adbd.recovery \
+    android.hardware.health@2.0-impl-default.recovery \
+    cgroups.recovery.json \
+    charger.recovery \
+    init_second_stage.recovery \
+    ld.config.recovery.txt \
+    linker.recovery \
+    recovery \
+    shell_and_utilities_recovery \
+    watchdogd.recovery \
+
 # Host tools to install
 PRODUCT_HOST_PACKAGES += \
     adb \
