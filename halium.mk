@@ -349,6 +349,7 @@ PRODUCT_PACKAGES += \
     libcamera_compat_layer \
     libdroidmedia \
     libhwc2_compat_layer \
+    libui_compat_layer \
     libmedia_compat_layer \
     libselinux_stubs \
     libubuntu_application_api \
