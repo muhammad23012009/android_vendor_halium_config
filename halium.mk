@@ -317,6 +317,7 @@ PRODUCT_PACKAGES += \
     libbiometry_fp_api \
     libcamera_compat_layer \
     libhwc2_compat_layer \
+    libui_compat_layer \
     libmedia_compat_layer \
     libubuntu_application_api \
     micshm.sh \
