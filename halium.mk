@@ -237,7 +237,7 @@ PRODUCT_PACKAGES += \
     drmserver \
     libfilterpack_imageproc \
     make_f2fs \
-    vndk_snapshot_package \
+    vndk_apex_snapshot_package \
 
 # Wrapped net utils for /vendor access.
 PRODUCT_PACKAGES += netutils-wrapper-1.0
@@ -247,7 +247,6 @@ PRODUCT_PACKAGES += com.android.runtime
 
 # ART APEX module.
 PRODUCT_PACKAGES += com.android.art
-PRODUCT_HOST_PACKAGES += com.android.art
 
 # Base modules and settings for recovery from base_vendor.mk
 PRODUCT_PACKAGES += \
@@ -349,7 +348,6 @@ PRODUCT_PACKAGES += \
     libcamera_compat_layer \
     libdroidmedia \
     libhwc2_compat_layer \
-    libui_compat_layer \
     libmedia_compat_layer \
     libselinux_stubs \
     libubuntu_application_api \
