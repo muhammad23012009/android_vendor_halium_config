@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     blkid \
     service-blobstore \
     bootstat \
+    boringssl_self_test \
     bpfloader \
     bugreport \
     bugreportz \
@@ -38,20 +39,11 @@ PRODUCT_PACKAGES += \
     cmd \
     com.android.adbd \
     com.android.conscrypt \
-    com.android.extservices \
     com.android.i18n \
-    com.android.ipsec \
     com.android.media \
     com.android.media.swcodec \
     com.android.mediaprovider \
     com.android.os.statsd \
-    com.android.permission \
-    com.android.resolv \
-    com.android.neuralnetworks \
-    com.android.sdkext \
-    com.android.tethering \
-    com.android.tzdata \
-    com.android.wifi \
     crash_dump \
     debuggerd\
     device_config \
@@ -124,6 +116,7 @@ PRODUCT_PACKAGES += \
     libgui \
     libhardware \
     libhardware_legacy \
+    libinit \
     libinput \
     libinputflinger \
     libiprouteutil \
@@ -131,7 +124,6 @@ PRODUCT_PACKAGES += \
     libjpeg \
     liblog \
     libm.bootstrap \
-    libmdnssd \
     libmedia \
     libmedia_jni \
     libmediandk \
@@ -173,7 +165,6 @@ PRODUCT_PACKAGES += \
     logd \
     lpdump \
     lshal \
-    mdnsd \
     mediacodec.policy \
     mediaextractor \
     mediametrics \
@@ -245,9 +236,6 @@ PRODUCT_PACKAGES += netutils-wrapper-1.0
 # Runtime (Bionic) APEX module.
 PRODUCT_PACKAGES += com.android.runtime
 
-# ART APEX module.
-PRODUCT_PACKAGES += com.android.art
-
 # Base modules and settings for recovery from base_vendor.mk
 PRODUCT_PACKAGES += \
     adbd.recovery \
@@ -277,7 +265,6 @@ PRODUCT_HOST_PACKAGES += \
     incident_report \
     ld.mc \
     lpdump \
-    mdnsd \
     minigzip \
     mke2fs \
     resize2fs \
