@@ -159,7 +159,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     libwilhelm \
     linker \
-    linkerconfig \
     lmkd \
     logcat \
     logd \
@@ -211,7 +210,6 @@ PRODUCT_PACKAGES += \
     uncrypt \
     usbd \
     vdc \
-    viewcompiler \
     vndservicemanager \
     vold \
     watchdogd \
@@ -265,18 +263,15 @@ PRODUCT_HOST_PACKAGES += \
     incident_report \
     ld.mc \
     lpdump \
-    minigzip \
     mke2fs \
     resize2fs \
     sgdisk \
     sqlite3 \
     tinyplay \
     tune2fs \
-    tzdatacheck \
     unwind_info \
     unwind_reg_info \
     unwind_symbols \
-    viewcompiler \
     tzdata_host \
     tzdata_host_tzdata_apex \
     tzlookup.xml_host_tzdata_apex \
