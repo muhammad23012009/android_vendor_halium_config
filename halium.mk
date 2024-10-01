@@ -18,17 +18,17 @@
 PRODUCT_PACKAGES += \
     adbd_system_api \
     android.hardware.bluetooth.a2dp@1.0 \
+    android.hardware.thermal-V2-ndk \
     android.hidl.allocator@1.0-service \
     android.hidl.memory@1.0-impl \
     android.hidl.memory@1.0-impl.vendor \
-    android.system.suspend@1.0-service \
+    android.system.suspend-service \
     apexd \
     appops \
     atrace \
     bcc \
     blank_screen \
     blkid \
-    service-blobstore \
     bootstat \
     boringssl_self_test \
     bpfloader \
@@ -63,9 +63,9 @@ PRODUCT_PACKAGES += \
     gsi_tool \
     heapprofd \
     heapprofd_client \
+    hwservicemanager \
     gatekeeperd \
     gpuservice \
-    hwservicemanager \
     idmap2 \
     idmap2d \
     ime \
@@ -81,7 +81,6 @@ PRODUCT_PACKAGES += \
     ip \
     iptables \
     ip-up-vpn \
-    service-jobscheduler \
     keystore \
     ld.config.txt \
     credstore \
@@ -97,6 +96,7 @@ PRODUCT_PACKAGES += \
     libaudioroute \
     libbinder \
     libbinder_ndk \
+    libbinder_rpc_unstable \
     libc.bootstrap \
     libcamera2ndk \
     libcutils \
@@ -310,6 +310,10 @@ PRODUCT_PACKAGES_DEBUG := \
     unwind_info \
     unwind_reg_info \
     unwind_symbols \
+
+# Base modules when shipping api level is less than or equal to 34
+PRODUCT_PACKAGES_SHIPPING_API_LEVEL_34 += \
+    android.hidl.memory@1.0-impl \
 
 # Packages included only for eng/userdebug builds, when building with SANITIZE_TARGET=address
 PRODUCT_PACKAGES_DEBUG_ASAN := \
